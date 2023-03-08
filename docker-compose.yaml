@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  nginx:
+    image: nickhasser/nginx:1.23.3-sub_filter
+    build:
+      context: ./modules
+      args:
+        ENABLED_MODULES: subs-filter
+      tags:
+        - "nickhasser/nginx:1.23.3-sub_filter"
